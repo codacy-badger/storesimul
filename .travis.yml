@@ -1,0 +1,18 @@
+language: c
+
+sudo: enabled
+
+os:
+  - linux
+
+before_script: 
+  - bash ci/travis-before-script.sh
+
+script:
+  - bash ci/travis-script.sh
+
+compiler:
+  - gcc
+
+notifications:
+  email: false
