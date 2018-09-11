@@ -31,10 +31,11 @@ typedef struct simulation_storage_s simulation_storage_t;
  *              (mail: arella.1646983@studenti.uniroma1.it)
  *
  *	@param[in]  simulation_storage_t*      	Simulation parameters to store
+ *	@param[in]	void (store_simulation_consumer*)(simulation_storage_t* params)		Store simulation function
  *              
  *  @return 	Void.
  */
-void create_simulation_storage(simulation_storage_t* params);
+void create_simulation_storage(simulation_storage_t* params, void (*store_simulation_consumer)(simulation_storage_t* params));
 
 /**
  *  @brief      This function starts an atomic critical section for simulation.
@@ -62,15 +63,6 @@ void wait_simulation();
  *  @return 	Void.
  */
 void post_simulation();
-
-/**
- *  @brief      This function must be implemented to store simulation data.
- *
- *	@param[in]  simulation_storage_t*      	Simulation parameters to store
- *              
- *  @return 	Void.
- */
-void store_simulation(simulation_storage_t* params);
 
 /**
  *	@}

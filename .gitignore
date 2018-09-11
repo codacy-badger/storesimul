@@ -1,3 +1,5 @@
+*.pc.in
+
 # http://www.gnu.org/software/automake
 Makefile
 Makefile.in
@@ -10,6 +12,7 @@ Makefile.in
 /compile
 /config.guess
 /config.h.in
+/config.h.in~
 /config.h
 /config.log
 /config.status
@@ -37,3 +40,8 @@ src/.deps/*
 src/.libs/*
 src/*.o
 src/*.lo
+src/internals/.deps/*
+src/internals/.libs/*
+src/internals/.dirstamp
+src/internals/*.o
+src/internals/*.lo

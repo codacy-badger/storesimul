@@ -6,7 +6,15 @@ AC_INIT([libstoresimul], [1.0], [arella.1646983@studenti.uniroma1.it])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])
-AM_INIT_AUTOMAKE([foreign 1.13])
+
+AC_SUBST(prefix, ["/usr/local"])
+AC_SUBST(libdir, ["$(prefix)/lib"])
+AC_SUBST(includedir, ["$(prefix)/include"])
+AC_SUBST(pkgconfiginstalldir, ["/usr/share/pkgconfig"])
+
+AM_INIT_AUTOMAKE([foreign 1.13 subdir-objects])
+
+PKG_PROG_PKG_CONFIG([0.25]) # check and set $PKG_CONFIG
 
 # Checks for programs.
 AC_PROG_CC
@@ -31,22 +39,27 @@ AC_EGREP_CPP(posix_200809L_supported,
 )
 
 # Checks for header files.
-AC_CHECK_HEADERS([errno.h stdlib.h signal.h string.h pthread.h semaphore.h])
+AC_CHECK_HEADERS_ONCE([ errno.h 
+                        stdlib.h 
+                        signal.h 
+                        string.h 
+                        pthread.h 
+                        sys/types.h 
+                        sys/ipc.h 
+                        sys/sem.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 
 AC_SEARCH_LIBS([pthread_create], [pthread])
 AC_SEARCH_LIBS([pthread_detach], [pthread])
-AC_SEARCH_LIBS([sem_init], [pthread])
-AC_SEARCH_LIBS([sem_wait], [pthread])
-AC_SEARCH_LIBS([sem_post], [pthread])
-AC_SEARCH_LIBS([sem_destroy], [pthread])
 
 # Checks for library functions.
-AC_CHECK_FUNCS([memset strerror])
+AC_CHECK_FUNCS([memset strerror semget semctl semop])
 
-AC_CONFIG_FILES([Makefile
+AC_CONFIG_FILES([storesimul.pc
+                 Makefile
                  src/Makefile
                  examples/Makefile
                  man/Makefile])
+
 AC_OUTPUT

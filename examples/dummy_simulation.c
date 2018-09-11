@@ -14,11 +14,11 @@ void store_simulation(simulation_storage_t* params) {
 int main(int argc, char** argv) {
     int a[] = {1,2,3};
     int b[] = {1,2,3};
-    
+
     simulation_storage_t param = {	.array_1 = a,
                             		.array_2 = b};
     
-    create_simulation_storage(&param);
+    create_simulation_storage(&param, &store_simulation);
     
     // SIMULA TUTTE COSE
     uint32_t i, sim_num = 0;
