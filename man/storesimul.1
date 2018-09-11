@@ -1,0 +1,26 @@
+.\" Manpage for storesimul.
+.\" Contact arella.1646983@studenti.uniroma1.it for comments or help.
+
+.TH storesimul 3 "2018" "1.0" "storesimul man page"
+.SH NAME
+storesimul \- Simple simulation data secure storing
+
+.SH SYNOPSIS
+.BI #include <storesimul/storesimul.h>
+
+.B struct simulation_storage_s;
+.B typedef struct simulation_storage_s simulation_storage_t;
+
+void create_simulation_storage(simulation_storage_t* params);
+void wait_simulation();
+void post_simulation();
+void store_simulation(simulation_storage_t* params);
+
+.SH DESCRIPTION
+storesimul
+.SH OPTIONS
+storesimul
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Arella Matteo (arella.1646983@studenti.uniroma1.it)

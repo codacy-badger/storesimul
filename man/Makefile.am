@@ -1,0 +1,1 @@
+man_MANS = storesimul.1
