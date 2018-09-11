@@ -1,0 +1,10 @@
+prefix=@prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE_NAME@
+Description: Secure simulation data storing library
+Version: @PACKAGE_VERSION@
+
+Cflags:
+Libs: -lstoresimul

@@ -1,4 +1,4 @@
-*.pc.in
+*.pc
 
 # http://www.gnu.org/software/automake
 Makefile
