@@ -1,3 +1,3 @@
-# storesimul [![Build Status](https://travis-ci.org/MatteoArella/storesimul.svg?branch=develop)](https://travis-ci.org/MatteoArella/storesimul) [![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+# storesimul [![Build Status](https://travis-ci.org/MatteoArella/storesimul.svg?branch=develop)](https://travis-ci.org/MatteoArella/storesimul) [![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT) [![Maintainability](https://api.codeclimate.com/v1/badges/6774f57fca99c471f7c1/maintainability)](https://codeclimate.com/github/MatteoArella/storesimul/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/6774f57fca99c471f7c1/test_coverage)](https://codeclimate.com/github/MatteoArella/storesimul/test_coverage)
 
 Simple simulation data secure storing
